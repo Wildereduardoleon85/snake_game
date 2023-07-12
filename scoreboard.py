@@ -26,11 +26,11 @@ class Scoreboard(Turtle):
             align=ALIGNMENT,
             font=FONT,
         )
-        self.write_score_to_file()
 
     def reset(self):
         if self.score > self.high_score:
             self.high_score = self.score
+            self.write_score_to_file()
         self.score = 0
         self.update()
 
